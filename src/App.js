@@ -64,12 +64,12 @@ function App() {
             <input onChange={LoadData} class="input" type="text" placeholder="Search Location" />
           </div>
         </div>
-        <div className='snap-y '>
+        <div className=''>
           {
             places?.map(place => <>
-              <div class="card mt-6 mx-8 bg-base-200 shadow-xl w-50vh scroll-ml-6 snap-start" onClick={() => ShowLocation(place.longitude, place.latitude)}>
+              <div class="card mt-6 mx-8 bg-base-200 shadow-xl w-50vh snap-start" onClick={() => ShowLocation(place.longitude, place.latitude)}>
                 <div class="py-6 px-4">
-                  <h2 class="">{place.address.slice(",")}</h2>
+                  <h2 class="">{place.address.slice(0, 20)}</h2>
                   <p>{place.area} {place.city}</p>
                 </div>
               </div>
@@ -77,7 +77,7 @@ function App() {
             </>)
           }</div>
       </ div>
-      <div className='fixed right-0' id="map"></div>
+      <div className='fixed right-0 w-100vh' id="map"></div>
     </div >
 
   )
