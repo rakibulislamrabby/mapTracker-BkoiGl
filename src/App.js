@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import './components/Home/Home.css'
-import Home from './components/Home/Home';
 
 function App() {
+  const [dark, setDark] = useState(false)
   const [places, setPlace] = useState([]);
   const [longitude, setLongitude] = useState('');
   const [latitude, setLatitude] = useState('');
@@ -52,28 +52,33 @@ function App() {
   }
 
   return (
-    <div className='flex justify-between'>
-      {/* <div><Home></Home></div> */}
-      <div>
-        <div class="logo">Bari<span class="logo-color">koi</span></div>
-        <div class="input-div" >
-          <input onChange={LoadData} class="input" type="text" placeholder="Search Location" />
+    <div className='flex justify-between' data-theme={dark ? "dark" : "light"}>
+
+      < div >
+        <div className=''>
+          <div className='flex justify-between font-bold text-2xl '>
+            <div class="logo">Bari<span class="logo-color">koi</span></div>
+            <div className='mt-4'><button onClick={() => setDark(!dark)}>{dark ? "Light" : "Dark"}</button></div>
+          </div>
+          <div class="input-div" >
+            <input onChange={LoadData} class="input" type="text" placeholder="Search Location" />
+          </div>
         </div>
-        <div className='fixed scroll-m-60'>
+        <div className='snap-y '>
           {
             places?.map(place => <>
-              <div class="card mt-6 mx-8 bg-base-200 shadow-xl" onClick={() => ShowLocation(place.longitude, place.latitude)}>
-                <div class="py-6">
-                  <h2 class="">{place.address}</h2>
+              <div class="card mt-6 mx-8 bg-base-200 shadow-xl w-50vh scroll-ml-6 snap-start" onClick={() => ShowLocation(place.longitude, place.latitude)}>
+                <div class="py-6 px-4">
+                  <h2 class="">{place.address.slice(",")}</h2>
                   <p>{place.area} {place.city}</p>
                 </div>
               </div>
 
             </>)
           }</div>
-      </div>
-      <div id="map"></div>
-    </div>
+      </ div>
+      <div className='fixed right-0' id="map"></div>
+    </div >
 
   )
 };

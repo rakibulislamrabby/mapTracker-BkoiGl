@@ -34,8 +34,3 @@ body {
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
 
 }
-.Scroll-bar{
-        height: 50vh;
-        width: 50vh;
-        overflow: hidden;
-}
