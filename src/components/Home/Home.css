@@ -1,0 +1,41 @@
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    padding-left: 10px;
+    padding-top: 15px;
+}
+
+.logo-color {
+    color: #2ddbac;
+}
+
+.input-div {
+    margin-top: 20px;
+    padding-left: 10px;
+}
+
+.input {
+    width: 75vh;
+    height: 40px;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+
+}
+.Scroll-bar{
+        height: 50vh;
+        width: 50vh;
+        overflow: hidden;
+}

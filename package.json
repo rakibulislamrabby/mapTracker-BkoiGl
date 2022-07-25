@@ -6,9 +6,14 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "bkoi-gl": "^1.0.10",
+    "daisyui": "^2.20.0",
+    "mapbox-gl": "^2.9.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-map-gl": "^7.0.18",
     "react-scripts": "5.0.1",
+    "use-barikoi": "^2.1.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -34,5 +39,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.1.6"
   }
 }
